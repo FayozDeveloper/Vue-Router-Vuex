@@ -5,7 +5,7 @@
             <div class="stats">
               <div class="info_stats">
                 <div class="icon_stats">
-                  <img class="img" src="../../assets/illus1.png" alt="">
+                  <img class="img" src="../assets/illus1.png" alt="">
                 </div>
                 <p class="count">123</p>
                 <h5>Happy Clients</h5>
@@ -14,7 +14,7 @@
             <div class="stats2">
               <div class="info_stats">
                 <div class="icon_stats">
-                  <img class="img" src="../../assets/illus2.png" alt="">
+                  <img class="img" src="../assets/illus2.png" alt="">
                 </div>
                 <p class="count">123</p>
                 <h5>Projects Completed</h5>
@@ -25,7 +25,7 @@
             <div class="stats3">
               <div class="info_stats">
                 <div class="icon_stats">
-                  <img class="img" src="../../assets/illus4.png" alt="">
+                  <img class="img" src="../assets/illus4.png" alt="">
                 </div>
                 <p class="count">123</p>
                 <h5>Projects Completed</h5>
@@ -34,7 +34,7 @@
             <div class="stats4">
               <div class="info_stats">
                 <div class="icon_stats">
-                  <img class="img" src="../../assets/illus3.png" alt="">
+                  <img class="img" src="../assets/illus3.png" alt="">
                 </div>
                 <p class="count">123</p>
                 <h5>Years in Business</h5>

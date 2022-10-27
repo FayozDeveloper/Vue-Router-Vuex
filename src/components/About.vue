@@ -2,7 +2,7 @@
   <div class="container_about">
     <div class="container">
       <div class="image col-7">
-        <img src="../../assets/aboutPers.png" alt="img not found">
+        <img src="../assets/aboutPers.png" alt="img not found">
       </div>
       <div class="card_about">
         <div class="title">

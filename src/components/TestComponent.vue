@@ -1,19 +1,20 @@
-<template class="wrap">
-  <h1>TEST MSG</h1>
-  <h2>{{props}}</h2>
+<template>
   <div>
+    <h1>TEST MSG</h1>
+    <h2>{{props}}</h2>
     <div>
-      <input type="text" v-model="search" ref="input"/>
-      <label>Search Users:</label>
-      <h1>Slot example</h1>
-      <slot>
-        This is Slot
-      </slot>
+       <div>
+        <input type="text" v-model="search" ref="input"/>
+        <label>Search Users:</label>
+        <h1>Slot example</h1>
+        <slot>
+          This is Slot
+        </slot>
+      </div>
+      <ul>
+        <li v-for="user in filteredAndSorted" :key="user.id">{{ user.name }}</li>
+      </ul>
     </div>
-    <ul>
-      <li v-for="user in filteredAndSorted" :key="user.id">{{ user.name }}</li>
-    </ul>
-
   </div>
 </template>
 
@@ -33,11 +34,11 @@ export default {
           name: "Prem",
         },
         {
-          id: 1,
+          id: 2,
           name: "Chandu",
         },
         {
-          id: 1,
+          id: 3,
           name: "Shravya",
         },
       ],
@@ -70,8 +71,5 @@ export default {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  .wrap{
-    background-color: #2c3e50;
   }
 </style>

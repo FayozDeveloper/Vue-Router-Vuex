@@ -11,27 +11,27 @@ const routes = [
       {
         path: '/',
         name: 'MainPage',
-        component: () => import('../components/test/MainPage.vue')
+        component: () => import('../components/MainPage.vue')
       },
       {
         path:'/about',
         name: 'About',
-        component: () => import('../components/test/About.vue')
+        component: () => import('../components/About.vue')
       },
       {
         path: '/projects',
         name: 'ProjectsPage',
-        component: () => import('@/components/test/ProjectsPage.vue')
+        component: () => import('@/components/ProjectsPage.vue'),
       },
       {
         path: '/service',
         name: 'Services',
-        component: () => import('@/components/test/Services.vue')
+        component: () => import('@/components/Services.vue')
       },
       {
         path: '/contact',
         name: 'Form',
-        component: () => import('@/components/test/Fom.vue')
+        component: () => import('@/components/Fom.vue')
       }
     ]
   },

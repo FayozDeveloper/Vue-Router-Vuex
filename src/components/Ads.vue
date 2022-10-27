@@ -24,7 +24,7 @@ export default {
 .container-fluid{
   width: 100%;
   height: 300px;
-  background-image: url("../../assets/unsplash_MP0bgaS_d1c.png");
+  background-image: url("../assets/unsplash_MP0bgaS_d1c.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

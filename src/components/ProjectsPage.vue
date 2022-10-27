@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <div>
       <h1>Projects</h1>
       <div class="projects_content ">
         <div class="left_side col-md-3">
@@ -12,58 +13,35 @@
         </div>
         <div class="right_side col-md-9">
           <div class="row carousel">
-            <div class="card col-sm-4 col-md-6">
+            <div  v-for="project in allProjects"  :key="project.id" class="card col-sm-4 col-md-6">
               <div class="card-content">
-                <img src="../../assets/car1img.png" alt="img not found">
+                <img :src="project.img" alt="img not found">
                 <div class="info_section">
-                  <p class="title">Wildstone Infra Hotel</p>
-                  <h6>2715 Ash Dr. San Jose, South Dakota</h6>
-                </div>
-              </div>
-            </div>
-            <div class="card col-sm-4 col-md-6">
-              <div class="card-content">
-                <img src="../../assets/project2.png" alt="img not found">
-                <div class="info_section">
-                  <p class="title">Wish Stone Building</p>
-                  <h6>2972 Westheimer Rd. Santa Ana, Illinois </h6>
-                </div>
-              </div>
-            </div>
-            <div class="card col-sm-4 col-md-6">
-              <div class="card-content">
-                <img src="../../assets/projects3.png" alt="img not found">
-                <div class="info_section">
-                  <p class="title">Mr. Parkinston’s House</p>
-                  <h6>3517 W. Gray St. Utica, Pennsylvania</h6>
-                </div>
-              </div>
-            </div>
-            <div class="card col-sm-4 col-md-6">
-              <div class="card-content">
-                <img src="../../assets/projects4.png" alt="img not found">
-                <div class="info_section">
-                  <p class="title">Oregano Height</p>
-                  <h6>2464 Royal Ln. Mesa, New Jersey</h6>
+                  <p class="title">{{project.title}}</p>
+                  <h6>{{project.desc}}</h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
   name: "ProjectsPage",
-  data(){
-    return{
-      methods: {
+  methods: {
+    ...mapActions(['fetchProjects'])
 
-      }
-    }
-  }
+  },
+  computed: mapGetters(['allProjects']),
+  created() {
+    this.fetchProjects()
+  },
 }
 
 
@@ -72,12 +50,6 @@ export default {
 <style scoped>
     .container{
       margin-top: 5vw;
-    }
-    .left_side{
-      /*border: 1px solid red;*/
-    }
-    .right_side{
-      /*border: 1px solid blue*/
     }
     .projects_content{
       display: flex;

@@ -14,7 +14,7 @@
             <p>hello@thebox.com</p>
         </div>
         <div class="info">
-          <img src="../../assets/LogoGroup.svg" alt="">
+          <img src="../assets/LogoGroup.svg" alt="">
             <p class='logo'>TheBox</p>
         </div>
       </div>
@@ -29,9 +29,9 @@
         <div class="social">
           <p class="frame_">SOCIAL:</p>
           <div class="social_icons">
-            <img src="../../assets/fa-facebook.svg" alt="img not found">
-            <img src="../../assets/fa-insta.svg" alt="img not found">
-            <img src="../../assets/fa-twitter.svg" alt="img not found">
+            <img src="../assets/fa-facebook.svg" alt="img not found">
+            <img src="../assets/fa-insta.svg" alt="img not found">
+            <img src="../assets/fa-twitter.svg" alt="img not found">
           </div>
         </div>
       </div>

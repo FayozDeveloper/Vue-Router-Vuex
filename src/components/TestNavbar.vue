@@ -25,7 +25,7 @@
       </ul>
       <h1 class="logo">
         <a href="/" class="navbar-brand d-flex">
-          <img src="../../assets/LogoGroup.svg" alt="">
+          <img src="../assets/LogoGroup.svg" alt="">
           <p class="logoBrand">TheBox</p>
         </a>
       </h1>
