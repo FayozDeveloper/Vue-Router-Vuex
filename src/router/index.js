@@ -32,7 +32,11 @@ const routes = [
         path: '/contact',
         name: 'Form',
         component: () => import('@/components/Fom.vue')
-      }
+      },
+      {
+        path: '/admin',
+        component: () => import('@/components/admin/layout/admin.vue')
+      },
     ]
   },
 ]

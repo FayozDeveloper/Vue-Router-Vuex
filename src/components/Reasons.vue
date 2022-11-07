@@ -2,7 +2,7 @@
   <div class="cardList">
     <h1 class="title">Our Reputation</h1>
     <div class="container">
-      <div v-for="card in cardList"  :key="card.id" class="card_item">
+      <div v-for="card in cardList"  :key="card.id" class="card_item" data-aos="fade-up">
         <img :src="imgPath(card.img)" alt="img not found">
         <p class='title'>{{card.title}}</p>
         <p class='desc'>{{card.desc}}</p>

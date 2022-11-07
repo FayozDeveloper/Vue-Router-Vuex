@@ -5,20 +5,19 @@
       <div class="projects_content ">
         <div class="left_side col-md-3">
           <ul class="category">
-            <li class="active">All</li>
-            <li>Commercial</li>
-            <li>Residential</li>
-            <li>Other</li>
+            <li v-for="category in AllCategories" :key="category.index" :class="{active : isActive === category}"  @click="onSelectCategory(category)" >
+              {{ category }}
+            </li>
           </ul>
         </div>
         <div class="right_side col-md-9">
           <div class="row carousel">
-            <div  v-for="project in allProjects"  :key="project.id" class="card col-sm-4 col-md-6">
+            <div v-for="project in filteredProds" :key="project.id" class="card col-sm-4 col-md-6">
               <div class="card-content">
                 <img :src="project.img" alt="img not found">
                 <div class="info_section">
-                  <p class="title">{{project.title}}</p>
-                  <h6>{{project.desc}}</h6>
+                  <p class="title">{{ project.title }}</p>
+                  <h6>{{ project.desc }}</h6>
                 </div>
               </div>
             </div>
@@ -34,11 +33,36 @@ import {mapActions, mapGetters} from "vuex";
 
 export default {
   name: "ProjectsPage",
-  methods: {
-    ...mapActions(['fetchProjects'])
-
+  data() {
+    return {
+      selectedCategory: 'All',
+      sortedProducts: [],
+      AllCategories: [
+        'All', 'Commercial', 'Residential', 'Other'
+      ],
+      isActive: 'All'
+    }
   },
-  computed: mapGetters(['allProjects']),
+
+  methods: {
+    ...mapActions(["fetchProjects"]),
+    onSelectCategory(category) {
+      this.selectedCategory = category;
+      this.isActive = category;
+      console.log(category)
+    },
+  },
+  computed: {
+    ...mapGetters(['allProjects']),
+    filteredProds() {
+      if (this.selectedCategory === 'All'){
+        return this.allProjects.map((item) => item);
+      }
+      else {
+        return this.allProjects.filter(x => x.category === this.selectedCategory);
+      }
+    }
+  },
   created() {
     this.fetchProjects()
   },
@@ -65,6 +89,7 @@ export default {
       font-size: 24px;
       line-height: 28px;
       color:  #C2C7D6;
+      cursor: pointer;
     }
     .active{
       color: #2947A9;
